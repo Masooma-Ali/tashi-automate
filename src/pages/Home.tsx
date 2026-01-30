@@ -145,45 +145,47 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24 bg-foreground text-primary-foreground relative overflow-hidden">
-        <div className="section-container relative z-10">
-          <AnimatedSection animation="fade-up" className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-lg text-primary-foreground/80 mb-8">
-              Let's discuss how our AI and automation solutions can drive efficiency,
-              security, and growth for your organization.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link to="/contact">
-                <Button
-                  size="lg"
-                  className="bg-white text-foreground hover:bg-white/90"
-                >
-                  Get Started Today
-                  <ArrowRight className="w-5 h-5" />
-                </Button>
-              </Link>
-              <Link to="/about">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="border-white/30 text-white hover:bg-white/10"
-                >
-                  Learn More About Us
-                </Button>
-              </Link>
-            </div>
-          </AnimatedSection>
-        </div>
+      {/* CTA Section - Floating Pill Design */}
+      <section className="py-24">
+        <div className="section-container">
+          <div className="max-w-4xl mx-auto bg-[hsl(220,15%,10%)] text-white rounded-[3rem] px-8 md:px-16 py-16 relative overflow-hidden">
+            <AnimatedSection animation="fade-up" className="text-center relative z-10">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
+                Let's discuss how our AI and automation solutions can drive efficiency,
+                security, and growth for your organization.
+              </p>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <Link to="/contact">
+                  <Button
+                    size="lg"
+                    className="bg-white text-foreground hover:bg-white/90 rounded-full"
+                  >
+                    Get Started Today
+                    <ArrowRight className="w-5 h-5" />
+                  </Button>
+                </Link>
+                <Link to="/about">
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="border-white/30 text-white hover:bg-white/10 rounded-full"
+                  >
+                    Learn More About Us
+                  </Button>
+                </Link>
+              </div>
+            </AnimatedSection>
 
-        {/* Decorative elements */}
-        <div className="absolute top-0 left-0 w-full h-full opacity-10">
-          <div className="absolute top-10 left-10 w-40 h-40 border border-white/30 rounded-full" />
-          <div className="absolute bottom-10 right-10 w-60 h-60 border border-white/30 rounded-full" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-white/20 rounded-full" />
+            {/* Decorative elements */}
+            <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+              <div className="absolute top-6 left-6 w-32 h-32 border border-white/30 rounded-full" />
+              <div className="absolute bottom-6 right-6 w-48 h-48 border border-white/30 rounded-full" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] border border-white/20 rounded-full" />
+            </div>
+          </div>
         </div>
       </section>
     </Layout>

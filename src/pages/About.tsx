@@ -139,30 +139,38 @@ export default function About() {
         </div>
       </section>
 
-      {/* Capabilities Section */}
-      <section className="py-24 bg-foreground text-primary-foreground">
+      {/* Capabilities Section - Floating Pill Design */}
+      <section className="py-24">
         <div className="section-container">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <AnimatedSection animation="fade-up">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                What We Bring to the Table
-              </h2>
-              <p className="text-lg text-primary-foreground/80 leading-relaxed">
-                Our team combines deep expertise in AI, automation, and enterprise
-                software development to deliver solutions that make a real difference.
-              </p>
-            </AnimatedSection>
+          <div className="max-w-5xl mx-auto bg-[hsl(220,15%,10%)] text-white rounded-[3rem] px-8 md:px-16 py-16 relative overflow-hidden">
+            <div className="grid md:grid-cols-2 gap-12 items-center relative z-10">
+              <AnimatedSection animation="fade-up">
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                  What We Bring to the Table
+                </h2>
+                <p className="text-lg text-white/80 leading-relaxed">
+                  Our team combines deep expertise in AI, automation, and enterprise
+                  software development to deliver solutions that make a real difference.
+                </p>
+              </AnimatedSection>
 
-            <AnimatedSection animation="fade-up" delay={200}>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {capabilities.map((capability) => (
-                  <div key={capability} className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
-                    <span className="text-primary-foreground/90">{capability}</span>
-                  </div>
-                ))}
-              </div>
-            </AnimatedSection>
+              <AnimatedSection animation="fade-up" delay={200}>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {capabilities.map((capability) => (
+                    <div key={capability} className="flex items-center gap-3">
+                      <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
+                      <span className="text-white/90">{capability}</span>
+                    </div>
+                  ))}
+                </div>
+              </AnimatedSection>
+            </div>
+
+            {/* Decorative elements */}
+            <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+              <div className="absolute top-8 right-8 w-24 h-24 border border-white/30 rounded-full" />
+              <div className="absolute bottom-8 left-8 w-36 h-36 border border-white/30 rounded-full" />
+            </div>
           </div>
         </div>
       </section>
