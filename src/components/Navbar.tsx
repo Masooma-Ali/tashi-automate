@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, LogIn } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import logo from "@/assets/logo.png";
@@ -75,8 +75,14 @@ export function Navbar() {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="flex items-center gap-3">
+          {/* CTA Buttons */}
+          <div className="flex items-center gap-2">
+            <Link to="/sign-in" className="hidden sm:block">
+              <Button variant="ghost" size="sm" className="rounded-full">
+                <LogIn className="w-4 h-4 mr-1" />
+                Sign In
+              </Button>
+            </Link>
             <Link to="/book-meeting" className="hidden sm:block">
               <Button variant="hero" size="sm" className="rounded-full">
                 Book a Meeting
@@ -117,8 +123,14 @@ export function Navbar() {
                 >
                   {link.label}
                 </Link>
-              ))}
-              <Link to="/book-meeting" className="mt-2">
+                ))}
+              <Link to="/sign-in" className="mt-2">
+                <Button variant="outline" className="w-full rounded-xl">
+                  <LogIn className="w-4 h-4 mr-2" />
+                  Sign In
+                </Button>
+              </Link>
+              <Link to="/book-meeting">
                 <Button variant="hero" className="w-full rounded-xl">
                   Book a Meeting
                 </Button>

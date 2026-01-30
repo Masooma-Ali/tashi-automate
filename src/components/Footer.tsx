@@ -2,11 +2,17 @@ import { Link } from "react-router-dom";
 import { Mail, MapPin, Phone, Linkedin, Twitter } from "lucide-react";
 import logo from "@/assets/logo.png";
 
+/**
+ * Footer Component
+ * 
+ * Site-wide footer with company info, navigation links, services list,
+ * and contact information. Uses a solid dark background for visual strength.
+ */
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-foreground text-primary-foreground">
+    <footer className="bg-[hsl(220,15%,10%)] text-white">
       <div className="section-container py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
@@ -21,7 +27,7 @@ export function Footer() {
               </div>
               <span className="font-semibold text-lg">Tashi Technologies</span>
             </div>
-            <p className="text-primary-foreground/70 text-sm leading-relaxed">
+            <p className="text-white/70 text-sm leading-relaxed">
               Empowering enterprises with intelligent automation and AI-driven
               solutions for the digital age.
             </p>
@@ -37,11 +43,12 @@ export function Footer() {
                 { href: "/services", label: "Services" },
                 { href: "/contact", label: "Contact" },
                 { href: "/book-meeting", label: "Book a Meeting" },
+                { href: "/sign-in", label: "Sign In" },
               ].map((link) => (
                 <Link
                   key={link.href}
                   to={link.href}
-                  className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm"
+                  className="text-white/70 hover:text-white transition-colors text-sm"
                 >
                   {link.label}
                 </Link>
@@ -62,7 +69,7 @@ export function Footer() {
               ].map((service) => (
                 <span
                   key={service}
-                  className="text-primary-foreground/70 text-sm"
+                  className="text-white/70 text-sm"
                 >
                   {service}
                 </span>
@@ -76,19 +83,19 @@ export function Footer() {
             <div className="space-y-3">
               <a
                 href="mailto:contact@tashitech.com"
-                className="flex items-center gap-3 text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm"
+                className="flex items-center gap-3 text-white/70 hover:text-white transition-colors text-sm"
               >
                 <Mail className="w-4 h-4" />
                 contact@tashitech.com
               </a>
               <a
                 href="tel:+1234567890"
-                className="flex items-center gap-3 text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm"
+                className="flex items-center gap-3 text-white/70 hover:text-white transition-colors text-sm"
               >
                 <Phone className="w-4 h-4" />
                 +1 (234) 567-890
               </a>
-              <div className="flex items-center gap-3 text-primary-foreground/70 text-sm">
+              <div className="flex items-center gap-3 text-white/70 text-sm">
                 <MapPin className="w-4 h-4 flex-shrink-0" />
                 <span>Innovation Hub, Tech City</span>
               </div>
@@ -97,14 +104,14 @@ export function Footer() {
             <div className="flex items-center gap-3 pt-2">
               <a
                 href="#"
-                className="w-9 h-9 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors"
+                className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-4 h-4" />
               </a>
               <a
                 href="#"
-                className="w-9 h-9 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors"
+                className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
                 aria-label="Twitter"
               >
                 <Twitter className="w-4 h-4" />
@@ -114,20 +121,20 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-primary-foreground/10 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-primary-foreground/60 text-sm">
+        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-white/60 text-sm">
             © {currentYear} Tashi Technologies Corp (Pvt) Ltd. All rights reserved.
           </p>
           <div className="flex items-center gap-6 text-sm">
             <a
               href="#"
-              className="text-primary-foreground/60 hover:text-primary-foreground transition-colors"
+              className="text-white/60 hover:text-white transition-colors"
             >
               Privacy Policy
             </a>
             <a
               href="#"
-              className="text-primary-foreground/60 hover:text-primary-foreground transition-colors"
+              className="text-white/60 hover:text-white transition-colors"
             >
               Terms of Service
             </a>
