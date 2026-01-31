@@ -199,8 +199,9 @@ export default function Services() {
                   </Button>
                 </Link>
                 <Link to="/book-meeting">
-                  <Button variant="heroOutline" size="lg">
+                  <Button variant="hero" size="lg">
                     Book a Meeting
+                    <ArrowRight className="w-5 h-5" />
                   </Button>
                 </Link>
               </div>

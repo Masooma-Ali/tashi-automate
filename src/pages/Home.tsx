@@ -169,11 +169,11 @@ export default function Home() {
                 </Link>
                 <Link to="/about">
                   <Button
-                    variant="outline"
                     size="lg"
-                    className="border-white/30 text-white hover:bg-white/10 rounded-full"
+                    className="bg-white text-foreground hover:bg-white/90 rounded-full"
                   >
                     Learn More About Us
+                    <ArrowRight className="w-5 h-5" />
                   </Button>
                 </Link>
               </div>
